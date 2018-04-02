@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
 var server = app.listen(8083, function() {
 	//start read xml file
 	
-	var filepath = 'd:\\bot1\\xls\\LN.xml';
+	var filepath = '\\xls\\LN.xml';
 	var parser = new xml2js.Parser();
 	fs.readFile(filepath, function(err, data) {
 		parser.parseString(data, function (err, result) {
@@ -192,7 +192,7 @@ app.get('/query/:ccId', function(req , res){
 	var custId = branch.substr(branch.indexOf('-')+1);
 	var country = branch.substr(0,branch.indexOf('-'));
 	console.log('CustomerId : ' + custId + ' country:' + country);
-    var filepath = 'd:\\bot1\\xls\\configData.xlsx';
+    var filepath = '\\xls\\configData.xlsx';
 	var fvalue = 'connection';
 	var field = 'Type';
 	var branchNew = country
