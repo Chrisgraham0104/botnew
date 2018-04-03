@@ -142,6 +142,7 @@ function configData(filepath, field, fvalue, callback){
 
 //Function to connect to database and execute query
 var  executeQuery = function(res, query, rt={}){      
+	console.log(query);
 		console.log('connection ------> ' + JSON.stringify(dbConfig));
      sql.connect(dbConfig, function (err) {
          if (err) {   
