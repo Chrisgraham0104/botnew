@@ -21,7 +21,7 @@ app.use(function (req, res, next) {
 });
 
 //Setting up server
-var server = app.listen(443, function() {
+var server = app.listen(process.env.port || process.env.PORT || 443, function() {
 	//start read xml file
 	
 	//var filepath = '.\\xls\\LN.xml';	
@@ -194,14 +194,16 @@ app.get('/query/:ccId', function(req , res){
 	var custId = branch.substr(branch.indexOf('-')+1);
 	var country = branch.substr(0,branch.indexOf('-'));
 	console.log('CustomerId : ' + custId + ' country:' + country);
-    var filepath = '.\\xls\\configData.xlsx';
+   	 //var filepath = '.\\xls\\configData.xlsx';
+	 var filepath = './xls/configData.xlsx';
 	var fvalue = 'connection';
 	var field = 'Type';
 	var branchNew = country
 	configData(filepath, field, fvalue, function(data) {
 			//console.log('Data : ' + data); 
-			var tmpPath = 'd:\\bot1\\';   // '.\\'
-			var connpath = tmpPath  + data.Folder + '\\'+ data.Filename;
+			//var tmpPath = 'd:\\bot1\\';   // '.\\'
+			var tmpPath = './';
+			var connpath = tmpPath  + data.Folder + '/'+ data.Filename;
 			//console.log(connpath);
 			var fvalue = branchNew;
 			var field = 'Branch';
