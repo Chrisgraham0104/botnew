@@ -222,6 +222,10 @@ app.get('/query/:ccId', function(req , res){
 	
 });
 
+app.get('/test', function (req,res){
+		res.send('testing');
+});
+	
 app.get('/query/:branch/:qstr', function (req, res) {			
 		var branch = req.params.branch;
 		console.log('Branch : ' + branch);		
