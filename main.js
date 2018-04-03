@@ -21,7 +21,7 @@ app.use(function (req, res, next) {
 });
 
 //Setting up server
-var server = app.listen(8083, function() {
+var server = app.listen(8080, function() {
 	//start read xml file
 	
 	var filepath = '.\\xls\\LN.xml';	
