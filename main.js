@@ -178,7 +178,7 @@ var  executeQuery = function(res, query, rt={}){
 }
 
 //GET API
-app.get('/', function(req , res){
+/*app.get('/', function(req , res){
                 var query = "select * from dbo.country";
                 executeQuery (res, query);
 });
@@ -186,7 +186,7 @@ app.get('/', function(req , res){
 app.get('/:pseudo', function(req , res){
                 var query = "select * from dbo.country where countrypseudo='" + req.params.pseudo + "'";
                 executeQuery (res, query);
-});
+});*/
 
 app.get('/query/:ccId', function(req , res){
 	var branch = req.params.ccId;
