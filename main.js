@@ -24,8 +24,7 @@ app.use(function (req, res, next) {
 var server = app.listen(8083, function() {
 	//start read xml file
 	
-	//var filepath = '.\\xls\\LN.xml';
-	var filepath = './xls/LN.xml';
+	var filepath = '.\\xls\\LN.xml';	
 	var parser = new xml2js.Parser();
 	fs.readFile(filepath, function(err, data) {
 		parser.parseString(data, function (err, result) {
