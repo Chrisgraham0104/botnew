@@ -223,7 +223,9 @@ app.get('/query/:ccId', function(req , res){
 });
 
 app.get('/test', function (req,res){
+	console.log('testing');
 		res.send('testing');
+	
 });
 	
 app.get('/query/:branch/:qstr', function (req, res) {			
