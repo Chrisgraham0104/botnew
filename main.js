@@ -217,6 +217,9 @@ app.get('/query/:ccId', function(req , res){
 					dbConfig ['password']= connData.Password;
 					dbConfig ['server'] = connData.Host;
 					dbConfig ['database']= connData.Database;
+				dbConfig['options'] =  {
+							encrypt: true // Use this if you're on Windows Azure
+						    };
 			});
 			
 	});	
