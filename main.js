@@ -158,6 +158,7 @@ var  executeQuery = function(res, query, rt={}){
                          request.query(query, function (err, resp) {
                            if (err) {
                                       console.log("Error while querying database :- " + err);
+				   	sql.close();				   
                                       res.send(JSON.stringify(err));
                                      }
                                      else {
