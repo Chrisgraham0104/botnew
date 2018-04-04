@@ -147,6 +147,7 @@ var  executeQuery = function(res, query, rt={}){
      sql.connect(dbConfig, function (err) {
          if (err) {   
                      console.log("Error while connecting database :- " + err);
+		 sql.close();
 					 res.status(404).send({'error':'undefined database or server'});
                      //res.send(JSON.stringify(err));
                   }
