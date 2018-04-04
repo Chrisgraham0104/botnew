@@ -212,7 +212,7 @@ app.get('/query/:ccId', function(req , res){
 			//console.log ('config -->' + field + ' ' + fvalue );
 			configData(connpath, field, fvalue, function(connData) {
 				console.log('Conn Data : ' + connData);
-					//dbConfig ['domain'] =  'MASTEK';
+					dbConfig ['domain'] =  'ipfdb';
 					dbConfig ['user'] = connData.Username;
 					dbConfig ['password']= connData.Password;
 					dbConfig ['server'] = connData.Host;
