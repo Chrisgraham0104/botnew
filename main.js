@@ -212,12 +212,12 @@ app.get('/query/:ccId', function(req , res){
 			//console.log ('config -->' + field + ' ' + fvalue );
 			configData(connpath, field, fvalue, function(connData) {
 				console.log('Conn Data : ' + connData);
-					dbConfig ['domain'] =  'ipfdb';
+					//dbConfig ['domain'] =  'ipfdb';
 					dbConfig ['user'] = connData.Username;
 					dbConfig ['password']= connData.Password;
 					dbConfig ['server'] = connData.Host;
 					dbConfig ['database']= connData.Database;
-				dbConfig['options'] =  {
+					dbConfig['options'] =  {
 							encrypt: true // Use this if you're on Windows Azure
 						    };
 			});
