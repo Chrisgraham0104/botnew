@@ -296,6 +296,9 @@ app.get('/query/:branch/:qstr', function (req, res) {
 						dbConfig ['password']= ln[0].Password[0];
 						dbConfig ['server'] = ln[0].Host[0];
 						dbConfig ['database']= ln[0].Database[0];
+						dbConfig['options'] =  {
+							encrypt: true // Use this if you're on Windows Azure
+						    };
 						emailData.push({'email': ln[0].Email[0]});
 						
 					}
