@@ -291,7 +291,7 @@ app.get('/query/:branch/:qstr', function (req, res) {
 					if(j.toLowerCase() == dbId.toLowerCase()){
 						var ln = countryData[0][j];
 						console.log(ln[0].Host[0]);
-						dbConfig ['domain'] =  'MASTEK';
+						//dbConfig ['domain'] =  'MASTEK';
 						dbConfig ['user'] = ln[0].Username[0];
 						dbConfig ['password']= ln[0].Password[0];
 						dbConfig ['server'] = ln[0].Host[0];
